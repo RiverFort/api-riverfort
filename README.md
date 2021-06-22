@@ -8,7 +8,25 @@ The riverfort is the RESTful API application built using the Django REST framewo
 * `pip install -r /path/to/requirements.txt`
 
 ## Development server
-  * Modify the `HOST` annotation of `company_db` to `127.0.0.1` (dev).
+  * Create `.env` file inside `riverfort/riverfort` directory.
+```
+DJANGO_SECRET_KEY=fb#$49ag$k9nnzk-=(33bya(#g-%07nywatcd9(b**lm6*iuwf
+DJANGO_ALLOWED_HOSTS=*
+
+RIVERFORT_DATABASE_ENGINE=postgresql_psycopg2
+RIVERFORT_DATABASE_NAME=riverFort
+RIVERFORT_DATABASE_USER=river
+RIVERFORT_DATABASE_PASSWORD=fort
+RIVERFORT_DATABASE_HOST=172.17.0.2
+RIVERFORT_DATABASE_PORT=5432
+
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_HOST_USER=RIVERFORT_TECH_EMAIL
+DEFAULT_FROM_EMAIL=RIVERFORT_TECH_EMAIL
+EMAIL_HOST_PASSWORD=RIVERFORT_TECH_EMAIL_PASSWORD
+```
+  * Modify the `HOST` annotation of `company_db` to `127.0.0.1` (dev) in `riverfort/riverfort/settings.py`.
 ```
 DATABASES = {
     'default': {
@@ -41,7 +59,7 @@ DATABASES = {
   * password: hello
 
 ## Dockerisation
-* Modify the `HOST` annotation of `company_db` to `172.17.0.2` (prod).
+* Modify the `HOST` annotation of `company_db` to `172.17.0.2` (prod) in riverfort/riverfort/settings.py.
 ```
 DATABASES = {
     'default': {
