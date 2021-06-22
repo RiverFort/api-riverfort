@@ -1,5 +1,5 @@
 # api-riverfort
-The riverfort is the RESTful API application built using the Django REST framework.
+The api-riverfort is the RESTful API application built using the Django REST framework.
 
 ## Installation
 * `venv`
